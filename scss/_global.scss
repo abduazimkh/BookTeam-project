@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-
 $main-dark-color: #0D0D0D;
 $main-light-color: #D1B89D;
 $second-dark-color: #152540;
 $main-light-dark-color: #DDE6F5;
+$second-light-color: #C9AC8CED;
 
-@mixin fonts($color, $f-size, $f-weight, $l-height){
-    @if $color == $main-dark-color{
+@mixin font($color: "", $f-size, $f-weight, $f-style, $f-height: 24px){
+    @if $color == "dark"{
         color: $main-dark-color;
-    }@else if $color == $main-light-color{
+    }@else if $color == "light"{
         color: $main-light-color;
-    }@else if $color == $main-light-dark-color{
+    }@else if $color == "blue"{
         color: $main-light-dark-color;
-    }@else if $color == $second-dark-color{
+    }@else if $color == "b-light"{
         color: $second-dark-color;
     }@else{
         opacity: #0d0d0d99;
@@ -21,22 +21,20 @@ $main-light-dark-color: #DDE6F5;
     font-family: 'Poppins', sans-serif;
     font-size: $f-size;
     font-weight: $f-weight;
-    line-height: $l-height;
+    font-style: $f-style;
+    line-height: $f-height;
 }
 
-@mixin fonts($f-pad, $color, $f-size, $f-weight, $l-height){
-    padding: $f-pad;
-    @if $color == $second-dark-color{
+@mixin button($padding, $bg-color, $border){
+    padding: $padding;
+    @if $color == "blue"{
         background-color: $second-dark-color;
         color: #fff;
-    }@else if $color == $main-light-color{
+    }@else if $color == "warning"{
         background-color: $main-light-color;
         color: #EFDAC3;
     }@else{
         opacity: #0d0d0d99;
     }
-    font-family: 'Poppins', sans-serif;
-    font-size: $f-size;
-    font-weight: $f-weight;
-    line-height: $l-height;
+    border: $border;
 }
