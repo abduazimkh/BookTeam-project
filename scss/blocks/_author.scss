@@ -1,0 +1,96 @@
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0;
+    h1 {
+      @include font("light", 25px, -weight, -style, -height);
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 42px;
+      a {
+        @include font("dark", 16px, 400, -style, 144.4%);
+        opacity: 0.5;
+      }
+      .a1 {
+        opacity: 0.5;
+      }
+      .a2 {
+        opacity: 1;
+      }
+    }
+  }
+  
+.author__wrapper{
+    display: flex;
+    gap: 64px;
+    img{
+        width: 40%;
+    }
+    .author__title{
+        width: 60%;
+        margin-top: 44px;
+        h1{
+            @include font("light", 48px, "", "", "");
+        }
+        p{
+            @include font("dark", 16px, "", "", 25px);
+            margin: 12px 0 54px 0;
+            opacity: .8;
+            max-width: 671px;
+        }
+        .first-ul{
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                li{
+                   @include font("dark", 16px, "", "", 18px);
+                   opacity: .8;
+                }
+                strong{
+                   @include font("light", 39px, "", "", 18px);
+                }
+            }
+        }
+    }
+}
+
+.works{
+    margin-top: 100px;
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        strong{
+            @include font("light", 31px, "", "", 18px);
+        }
+        li{
+            @include font("dark", 16px, "", "", 18px);
+        }
+    }
+
+    .works__cards{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 22px;
+        .work__card{
+            img{
+                width: 100%;
+                aspect-ratio: 1/1;
+            }
+            div{
+                h3{
+                    @include font("dark", 18px, 500, "", "");
+                }
+            }
+        }
+    }
+}
