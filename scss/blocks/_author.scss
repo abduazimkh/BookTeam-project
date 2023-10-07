@@ -28,7 +28,9 @@
     display: flex;
     gap: 64px;
     img{
-        width: 40%;
+        width: 50%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
     }
     .author__title{
         width: 60%;
@@ -46,6 +48,7 @@
             display: flex;
             gap: 16px;
             align-items: center;
+            width: 60%;
             ul{
                 display: flex;
                 flex-direction: column;
