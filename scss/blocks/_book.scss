@@ -61,6 +61,10 @@
       @include font("", 16px, -weight, -style, -height);
       @include button(12px 42px, "warning", none);
       border-radius: 15px;
+      transition: .3s;
+      &:active{
+        transform: scale(.9);
+      }
     }
   }
 }
