@@ -56,12 +56,11 @@ function renderAuthorsReel(data) {
   mainWrapper.addEventListener("click", (e) => {
     if (+e.target.closest("[data-index-li]").dataset.indexLi == 0) {
       const documentFragment = document.createDocumentFragment();
-      data[0].slice(0, 6).forEach((card) => {
-        console.log(card);
+      data[0].slice(0, 6).forEach((card,i) => {
         const div = document.createElement("div");
         div.className = "category_item";
         div.innerHTML = `
-            <a href="#">
+            <a  href="../pages/author.html?authorId=${card.id}">
                 <img src="http://localhost:5000/${card.image}"  alt="author image" />
             </a>
             <div>
