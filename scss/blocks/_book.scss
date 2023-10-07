@@ -92,8 +92,10 @@
       overflow: hidden;
       img {
           border-radius: 22px;
-            width: 100%;
-        }
+          width: 100%;
+          aspect-ratio: 1/1;
+      }
+
       div {
         padding: 22px;
         @include font("dark", 18px, -weight, -style, -height);
