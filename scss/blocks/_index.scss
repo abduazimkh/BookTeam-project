@@ -87,6 +87,11 @@
           border-radius: 22px;
           overflow: hidden;
           background-color: #F5F5F5;
+          img{
+            width: 100%;
+            object-fit: cover;
+            aspect-ratio: 1/1;
+          }
           div {
           h3 {
             @include font("dark", 24px, -weight, -style, -height);
