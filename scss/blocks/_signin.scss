@@ -1,0 +1,53 @@
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: $main-light-color;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    img{
+        display: inline-block;
+        padding-left: 100px;
+    }
+}
+
+#signin-form{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 35%;
+    height: 100%;
+    gap: 10px;
+    padding: 0 150px;
+    @include font("dark", 16px, "", "", "");
+    h1{
+        @include font("dark", 36px, 700, "", "");
+        margin-top: 180px;
+    }
+    a{
+        color: dodgerblue;
+        display: inline-block;
+        margin-bottom: 22px;
+    }
+    input{
+        border-radius: 10px;
+        border: 1px solid #B4B4BB;
+        outline: none;
+        padding: 15px;
+        width: 500px;
+        @include font("dark", 16px, "", "", "");
+        box-shadow: inset;
+        margin-bottom: 15px;
+    }
+    button{
+        width: 530px;
+        padding: 15px;
+        border-radius: 25px;
+        border: none;
+        @include font("light", 16px, 600, "", "");
+        color: #fff;
+        background-color: $second-dark-color;
+
+    }
+
+}
