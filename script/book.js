@@ -1,6 +1,8 @@
 const mainWrapper = document.querySelector(".all-categories"),
   mainCards = mainWrapper.querySelector(".categories__items2"),
   category = mainWrapper.querySelector(".category");
+(form = document.querySelector("#form")),
+  (searchInput = form.querySelector("#search-input"));
 
 const api = `http://localhost:5000/genre`;
 
@@ -9,7 +11,7 @@ fetch(api)
   .then((data) => renderData(data));
 
 function renderData(data) {
-  console.log(data);
+  // console.log(data);
   const documentFragment = document.createDocumentFragment();
   data.forEach((el, i) => {
     const li = document.createElement("li");
@@ -45,7 +47,7 @@ const authorsCtegory = async () => {
         return response.json();
       })
     );
-    console.log(allAuthorReel);
+    // console.log(allAuthorReel);
     renderAuthorsReel(allAuthorReel);
   } catch (err) {
     console.log(err);
@@ -62,7 +64,7 @@ function renderAuthorsReel(data) {
         const div = document.createElement("div");
         div.className = "category_item2";
         div.innerHTML = `
-            <a href="">
+            <a href="../pages/book-sail.html?bookId=${card.id}">
                 <img src="http://localhost:5000/${card.image}"  alt="author image" />
             </a>
             <div>
@@ -73,59 +75,70 @@ function renderAuthorsReel(data) {
       });
       mainCards.appendChild(documentFragment);
     }
-    // if (+e.target.closest("[data-index-li]").dataset.indexLi == 1) {
-    //   const documentFragment = document.createDocumentFragment();
-    //   data[1].forEach((card) => {
-    //     console.log(card);
-    //     const div = document.createElement("div");
-    //     div.className = "category_item2";
-    //     div.innerHTML = `
-    //           <a href="#">
-    //               <img src="http://localhost:5000/${card.image}"  alt="author image" />
-    //           </a>
-    //           <div>
-    //               <p>${card.title}</p>
-    //           </div>
-    //           `;
-    //     documentFragment.appendChild(div);
-    //   });
-    //   mainCards.appendChild(documentFragment);
-    // }
-    // if (+e.target.closest("[data-index-li]").dataset.indexLi == 2) {
-    //   const documentFragment = document.createDocumentFragment();
-    //   data[2].forEach((card) => {
-    //     console.log(card);
-    //     const div = document.createElement("div");
-    //     div.className = "category_item2";
-    //     div.innerHTML = `
-    //           <a href="#">
-    //               <img src="http://localhost:5000/${card.image}"  alt="author image" />
-    //           </a>
-    //           <div>
-    //               <p>${card.title}</p>
-    //           </div>
-    //           `;
-    //     documentFragment.appendChild(div);
-    //   });
-    //   mainCards.appendChild(documentFragment);
-    // }
-    // if (+e.target.closest("[data-index-li]").dataset.indexLi == 3) {
-    //   const documentFragment = document.createDocumentFragment();
-    //   data[3].forEach((card) => {
-    //     console.log(card);
-    //     const div = document.createElement("div");
-    //     div.className = "category_item2";
-    //     div.innerHTML = `
-    //           <a href="#">
-    //               <img src="http://localhost:5000/${card.image}"  alt="author image" />
-    //           </a>
-    //           <div>
-    //               <p>${card.title}</p>
-    //           </div>
-    //           `;
-    //     documentFragment.appendChild(div);
-    //   });
-    //   mainCards.appendChild(documentFragment);
-    // }
+    if (+e.target.closest("[data-index-li]").dataset.indexLi == 1) {
+      const documentFragment = document.createDocumentFragment();
+      data[1].forEach((card) => {
+        console.log(card);
+        const div = document.createElement("div");
+        div.className = "category_item2";
+        div.innerHTML = `
+              <a href="../pages/book-sail.html?bookId=${card.id}">
+                  <img src="http://localhost:5000/${card.image}"  alt="author image" />
+              </a>
+              <div>
+                  <p>${card.title}</p>
+              </div>
+              `;
+        documentFragment.appendChild(div);
+      });
+      mainCards.appendChild(documentFragment);
+    }
+    if (+e.target.closest("[data-index-li]").dataset.indexLi == 2) {
+      const documentFragment = document.createDocumentFragment();
+      data[2].forEach((card) => {
+        console.log(card);
+        const div = document.createElement("div");
+        div.className = "category_item2";
+        div.innerHTML = `
+              <a href="../pages/book-sail.html?bookId=${card.id}">
+                  <img src="http://localhost:5000/${card.image}"  alt="author image" />
+              </a>
+              <div>
+                  <p>${card.title}</p>
+              </div>
+              `;
+        documentFragment.appendChild(div);
+      });
+      mainCards.appendChild(documentFragment);
+    }
+    if (+e.target.closest("[data-index-li]").dataset.indexLi == 3) {
+      const documentFragment = document.createDocumentFragment();
+      data[3].forEach((card) => {
+        console.log(card);
+        const div = document.createElement("div");
+        div.className = "category_item2";
+        div.innerHTML = `
+              <a href="../pages/book-sail.html?bookId=${card.id}">
+                  <img src="http://localhost:5000/${card.image}"  alt="author image" />
+              </a>
+              <div>
+                  <p>${card.title}</p>
+              </div>
+              `;
+        documentFragment.appendChild(div);
+      });
+      mainCards.appendChild(documentFragment);
+    }
   });
+
+  // data.forEach((el, i) => {
+  //   el.forEach((ele) => {
+  //     form.addEventListener("submit", (e) => {
+  //       e.preventDefault();
+  //       if (searchInput.value == ele.title) {
+          
+  //       }
+  //     });
+  //   });
+  // });
 }
