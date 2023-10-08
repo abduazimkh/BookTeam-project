@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Author</title>
+    <link rel="stylesheet" href="../style/main.min.css">
+    <script src="../script/add-author.js" defer></script>
+</head>
+<body>
+    
+    <div class="add-author-wrapper">
+        <div class="add-auth-item1">
+            <input class="img-auth" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg, image/jpg" />
+        </div>
+
+        <div class="add-auth-item2">
+            <form id="add-auth-form">
+                <h1>Add Author</h1>
+                <input id="first-name" placeholder="First Name" type="text">
+                <input id="last-name" placeholder="Last Name" type="text">
+                <input id="birth" placeholder="Data of birth" type="number">
+                <input id="death" placeholder="Data of death" type="number">
+                <input id="country" placeholder="Country" type="text">
+                <input id="genre" placeholder="Genre" type="number">
+                <textarea id="bio" placeholder="Bio" cols="30" rows="10">
+                </textarea>
+                <button class="btn" type="submit">Create</button>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>
