@@ -1,0 +1,107 @@
+.profil__wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // padding: 40px;
+        background-color: #F3F6F9;
+        .item{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 20px;
+            width: 25%;
+            padding: 40px;
+            a{
+                color: dodgerblue;
+
+            }
+            @include font("dark", 16px, 500, -style, 144.4%);
+            strong{
+                width: 35px;
+                height: 35px;
+                border-radius: 5px;
+                background-color: #E5EAEE;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: dodgerblue;
+            }
+
+        }
+        .item:first-child{
+            background-color: $main-light-dark-color;
+            strong{
+                color: #fff;
+                background-color: $second-dark-color;
+            }
+        }
+    }
+}
+
+.wrapper__content{
+    display: flex;
+    gap: 100px;
+    padding: 0 50px;
+    .image{ 
+        div{
+            width: 200PX;
+            height: 200px;
+            border-radius: 50%;
+            background-color: $second-dark-color;
+        }
+    }
+
+    #profil-form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+        button{
+            width: 200px;
+            padding: 15px 35px;
+            background-color: $second-dark-color;
+            border-radius: 4px;
+            color: #fff;
+            font-weight: 700;
+            opacity: .9;
+            position: absolute;
+            bottom: -70px;
+            right: 0;
+        }
+        h1{
+            @include font("dark", 36px, 500, -style, 144.4%);
+        }
+        label{
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            @include font("dark", 16px, 400, -style, 144.4%);
+            p{
+                opacity: .8;
+            }
+            input{
+                width: 700px;
+                height: 30px;
+                border: none;
+                outline: none;
+                background-color: #F3F6F9;
+                border-radius: 4px;
+                padding: 10px;
+                @include font("dark", 16px, 400, -style, 144.4%);
+
+            }
+        }
+        label:nth-child(4){
+            input{
+                width: 350px;
+            }
+        }
+    }
+}
