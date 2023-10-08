@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 32px 0;
+    position: relative;
     h1 {
       @include font("light", 25px, -weight, -style, -height);
     }
@@ -21,6 +22,26 @@
       .a2 {
         opacity: 1;
       }
+      .menu{
+        display: flex;
+        flex-direction: column;
+        height: 30px;
+        padding-top: 5px;
+        overflow: hidden;
+        background-color: $main-light-color;
+        li{
+            @include font("dark", 16px, 500, -style, 144.4%);
+            color:#fff;
+        }
+        &:hover{
+            height: auto;
+            position: absolute;
+            top: 30px;
+            right: -110px;
+            z-index: 100;
+            padding: 20px
+        }
+    }
     }
   }
   
